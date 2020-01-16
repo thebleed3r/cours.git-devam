@@ -1,0 +1,11 @@
+.cmd{
+	color: chartreuse;
+	background-color: black;
+	padding: 5px;
+	margin : 10px;
+
+}
+
+.cmd:before{
+	content: 'cmd >'
+}
