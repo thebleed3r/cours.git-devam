@@ -14,17 +14,19 @@
 	<p>Dans la traçabilité des fichiers, GIT nous donne toujours 3 infos: Qui, Quand, Pourquoi?</p>
 
 	<h2>Installer et configurer GIT</h2>
+
 	<a href="https://git-scm.com/"></a>
-	<div class="cmd">git config --global user-email 'n.hoarau75@gmail.com'</div>
-	<div class="cmd">git config --global user-name 'nohdevam'</div>
+		<div class="cmd">git config --global user-email 'n.hoarau75@gmail.com'</div>
+		<div class="cmd">git config --global user-name 'nohdevam'</div>
+
+
 
 	<h2>Les commandes de base</h2>
+
 	<p>Initialaiser un projet:</p>
-		<div class="cmd">git init</div>
-	
+		<div class="cmd">git init</div>	
 	<p>Voir le statut des fichiers:</p>
-		<div class="cmd">git status</div>
-	
+		<div class="cmd">git status</div>	
 	<p>Ajouter des fichiers:</p>
 		<div>git add "nom du fichier"</div>
 	<p>Ajouter TOUS les fichiers:</p>
@@ -36,9 +38,48 @@
 		<div class="warning">Un commit nécésiite toujours un message</div>
 	<p>commit avec un message:</p>
 		<div class="cmd">git commit -m "message"</div></p>
+	<p>commit avec add + message (fonctionne sur les fichiers déjà add)</p>
 		<div class="cmd">git commit -a -m "message"</div>
 
 
+
+
+	<h2>Correction des fichiers</h2>
+
+	<p>Voir les différents commit:</p>
+		<div class="cmd">git log</div>
+	<p>Corriger les modifications sur un fichier (pas encore add):</p>
+		<div class="cmd">git checkout 'nom du fichier'</div>
+	<p>Supprimer un add:</p>
+		<div class="cmd">git reset 'nom du fichier'</div>
+	<p>Supprimer TOUS les add:</p>
+		<div class="cmd">git reset . 'nom du fichier'</div>
+	<p>Supprimer le dernier commit:</p>
+		<div class="cmd">git reset  HEAD^</div>
+	<p>Supprimer 2 derniers commit:</p>
+		<div class="cmd">git reset  HEAD^^</div>
+	
+
+
+	<h2>La notion de branche</h2>
+	<p>Un ebranche est une copie du projet. Elle permetde développer en parallèle de nouvelles fonctionnalités. Lorsqu'on considère les nouveautés opérationnelles on peut les rappatrier sur la version principale (master)</p>
+
+	<p>Voir les branches:</p>
+		<div class="cmd">git branch</div>
+
+	<p>Créer une branche:</p>
+		<div class="cmd">git branch 'nom'</div>
+
+	<p>Se placer sur une branche:</p>
+		<div class="cmd">git checkout 'nom'</div>
+
+	<p>Voir les diff entre 2 branches:</p>
+		<div class="cmd">git diff 'nom'..master</div>
+
+	<p>Apporter les modifs effectuées sur une branche dans master (il faut être ds master</p>
+		<div class="cmd">git checkout master</div>
+		<div class="cmd">git fetch .nom</div>
+		<div class="warning">le fetch va litteralement remplacer le master par la branche . Il s'agit donc d'une grosse modif ds le projet (ex: version 2)</div>
 
 </body>
 </html>
